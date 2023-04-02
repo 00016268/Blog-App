@@ -5,6 +5,13 @@ block content
     .container  
         h1 Create Blog 
 
+        if error 
+            p.error Some error occured! Try again!
+
+
+        if success 
+            p.success Blog is created!
+
         form.form(action="/create" method='POST')
             label Blog Title 
             input.input(type="text" name='title')
