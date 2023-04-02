@@ -28,5 +28,5 @@ node app
 
 ### Web application repository on github
 
-https://github.com/00016268/Blog-App
+[link to github repo] (https://github.com/00016268/Blog-App.git)
 
