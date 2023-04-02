@@ -58,8 +58,23 @@ app.get('/blogs', (req, res) => {
    
 })
 
-app.get('/blogs/detail', (req,res) => {
-    res.render('detail')
+app.get('/blogs/:id', (req,res) => {
+
+    const id = req.params.id
+
+    fs.readFile('./data/blogs.json', (err, data) => {
+        if (err) throw err
+
+        const blogs = JSON.parse(data)
+
+        const blog = blogs.filter(blog => blog.id == id) [0]
+
+        res.render('detail', {blog: blog})
+    })
+
+
+
+   
 
 })
 
