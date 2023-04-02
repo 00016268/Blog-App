@@ -6,5 +6,5 @@ block content
 
         each blog in blogs 
             .blog-wrapper 
-                a.blog(href='/blogs/detail')= blog 
+                a.blog(href=`/blogs/${ blogs.id }`)  #{blog.title}
                 a.delete(href='#') delete

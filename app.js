@@ -45,10 +45,17 @@ app.post('/create', (req, res) => {
     }
 })
 
-const blogs = ['Some awesome blog title' , 'Some awesome blog title 2']
+
 
 app.get('/blogs', (req, res) => {
-    res.render('blogs', {blogs: blogs})
+
+    fs.readFile('./data/blogs.json', (err, data) => {
+        if (err) throw err
+
+        const blogs = JSON.parse(data)
+        res.render('blogs', {blogs: blogs})
+    })
+   
 })
 
 app.get('/blogs/detail', (req,res) => {
