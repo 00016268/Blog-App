@@ -15,6 +15,12 @@ app.get('/create', (req, res) => {
     res.render('create')
 })
 
+const blogs = ['Some awesome blog title' , 'Some awesome blog title 2']
+
+app.get('/blogs', (req, res) => {
+    res.render('blogs', {blogs: blogs})
+})
+
 
 
 app.listen(8000, err => {
