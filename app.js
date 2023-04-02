@@ -21,6 +21,10 @@ app.get('/blogs', (req, res) => {
     res.render('blogs', {blogs: blogs})
 })
 
+app.get('/blogs/detail', (req,res) => {
+    res.render('detail')
+
+})
 
 
 app.listen(8000, err => {
