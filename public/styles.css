@@ -57,3 +57,30 @@ a:hover {
     color: #fff;
 
 }
+
+/*Create Page*/
+
+.form {
+    max-width: 60%;
+}
+
+.input {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    font-size: 1.3rem;
+    font-family: inherit;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display:inline-block;
+    background-color: tomato;
+    color: #fff;
+    font-size: 1.3rem;
+    border: none;
+    padding: 10px 20px;
+    font-family: inherit
+
+}
